@@ -1,0 +1,32 @@
+$text-sm: 1.5em;
+$text-md: 2em;
+$text-lg: 2.75em;
+$text-xl: 4em;
+
+@mixin text-sizing($text-sm, $text-md, $text-lg) {
+  font-size: $text-md;
+  &--sm {
+    font-size: $text-sm;
+  }
+  &--lg {
+    font-size: $text-lg;
+  }
+  &--xl {
+    font-size: $text-xl;
+  }
+}
+
+.text {
+  @include text-sizing($text-sm, $text-md, $text-lg);
+}
+
+.heading {
+  @include text-sizing($text-md, $text-lg, $text-xl);
+}
+
+@mixin flexbox($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: space-evenly;
+  align-items: center;
+}

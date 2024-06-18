@@ -1,0 +1,28 @@
+$screen-sm: 320px;
+$screen-md: 481px;
+$screen-lg: 821px;
+$screen-xl: 1025px;
+
+@mixin phone {
+  @media screen and (min-width: $screen-sm) {
+    @content;
+  }
+}
+
+@mixin ipad {
+  @media screen and (min-width: $screen-md) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media screen and (min-width: $screen-lg) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media screen and (min-width: $screen-xl) {
+    @content;
+  }
+}
