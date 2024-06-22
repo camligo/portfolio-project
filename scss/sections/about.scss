@@ -2,17 +2,6 @@
 @use "../partials/mixins" as m;
 @use "../partials/queries" as q;
 
-nav {
-  ul {
-    list-style-type: none;
-    li {
-      a {
-        text-decoration: none;
-      }
-    }
-  }
-}
-
 .intro-container {
   display: flex;
   gap: 20px;

@@ -1,7 +1,7 @@
 @use "./partials/variables" as v;
 @use "./partials/mixins" as m;
 @use "./partials/queries" as q;
-@use "./sections/home.scss";
+@use "./sections/home";
 @use "./sections/about";
 @use "./sections/contact";
 @use "./sections/projects";
@@ -33,7 +33,7 @@ footer {
   display: flex;
   justify-content: center;
 }
-// Text styling
+
 h1 {
   color: v.$contrast-color-pink;
   text-transform: uppercase;

@@ -2,3 +2,30 @@
 @use "../partials/mixins" as m;
 @use "../partials/queries" as q;
 
+.navbar-top {
+  @include m.flex($direction: row);
+  justify-content: flex-end;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 2rem;
+  margin-right: 20px;
+  list-style-type: none;
+  font-weight: bold;
+
+
+  li {
+    margin: 0.4rem;
+    a {
+      color: v.$text-color;
+      text-decoration: none;
+
+      &:hover {
+        font-size: larger;
+      }
+    }
+  }
+}
+
+#home {
+  justify-content: center;
+}
