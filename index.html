@@ -13,6 +13,9 @@
     <nav>
       <ul>
         <li>
+          <a href="#home">Home</a>
+        </li>
+        <li>
           <a href="#about">About</a>
         </li>
         <li>
@@ -25,11 +28,20 @@
     </nav>
   </header>
 
+  <section class="home">
+    <div class="wrapper">
+      <h1 id="welcomeText">
+        <span>Hi, I'm Camilla Ligovic 👋</span>
+        <span>I'm <span id="typewriter"></span>
+        <span id="cursor">|</span>
+        <br>
+      </h1>
+    </div>
+  </section>
+
   <main>
     <section id="about">
-      <h1>Camilla Ligovic 👩🏼‍💻</h1>
-      <h2>_nologist</h2>
-      <div class="container-about">
+      <div class="wrapper">
         <h2>About me</h2>
         <div class="intro-container">
           <div class="intro-text">
@@ -67,11 +79,13 @@
     </section>
 
     <section id="projects">
-      <h2>Projects</h2>
+      <div class="wrapper">
+        <h2>Projects</h2>
+      </div>
     </section>
 
     <section id="contact">
-      <div class="container-contact">
+      <div class="wrapper">
         <h2>Get in touch</h2>
         <form id="contactForm" class="form">
           <div class="floating-input">
@@ -86,7 +100,7 @@
           <div class="floating-input">
             <textarea name="message" id="message" placeholder="Leave a message" required></textarea>
           </div>
-          <div class="container-contact-btn">
+          <div class="btn-container">
             <button type="submit" id="btnSubmit">Send</button>
           </div>
         </form>
@@ -94,7 +108,7 @@
     </section>
   </main>
   <footer>
-
+    <p>Designed by Camilla Ligovic 2024</p>
   </footer>
 </body>
 </html>

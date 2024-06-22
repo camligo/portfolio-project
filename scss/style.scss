@@ -1,6 +1,7 @@
 @use "./partials/variables" as v;
 @use "./partials/mixins" as m;
 @use "./partials/queries" as q;
+@use "./sections/home.scss";
 @use "./sections/about";
 @use "./sections/contact";
 @use "./sections/projects";
@@ -10,11 +11,10 @@ body {
   margin: 0;
   padding: 0;
   background-color: v.$bg-color;
+  font-family: "Inter", sans-serif;
 
   .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include m.flex($direction: column);
     margin: 0 auto;
     width: 90%;
   }
@@ -22,16 +22,37 @@ body {
 
 main {
   margin: 20px;
-  font-family: "Inter", sans-serif;
 }
 
 section {
   @include m.full-screen;
+  @include m.flex($direction: column)
 }
 
+footer {
+  display: flex;
+  justify-content: center;
+}
 // Text styling
 h1 {
   color: v.$contrast-color-pink;
+  text-transform: uppercase;
+  @include q.phone {
+    @include m.text-sizing($size: v.$text-lg);
+  }
+  @include q.ipad {
+    @include m.text-sizing($size: v.$text-lg);
+  }
+  @include q.laptop {
+    @include m.text-sizing($size: v.$text-xl);
+  }
+  @include q.desktop {
+    @include m.text-sizing($size: v.$text-xl);
+  }
+};
+
+h2 {
+  color: v.$text-color;
   text-transform: uppercase;
   @include q.phone {
     @include m.text-sizing($size: v.$text-md);
@@ -41,22 +62,6 @@ h1 {
   }
   @include q.laptop {
     @include m.text-sizing($size: v.$text-lg);
-  }
-  @include q.desktop {
-    @include m.text-sizing($size: v.$text-xl);
-  }
-};
-
-h2 {
-  color: v.$text-color;
-  @include q.phone {
-    @include m.text-sizing($size: v.$text-sm);
-  }
-  @include q.ipad {
-    @include m.text-sizing($size: v.$text-md);
-  }
-  @include q.laptop {
-    @include m.text-sizing($size: v.$text-md);
   }
   @include q.desktop {
     @include m.text-sizing($size: v.$text-lg);
@@ -71,10 +76,9 @@ p {
     @include m.text-sizing($size: v.$text-sm);
   }
   @include q.laptop {
-    @include m.text-sizing($size: v.$text-sm);
+    @include m.text-sizing($size: v.$text-md);
   }
   @include q.desktop {
-    @include m.text-sizing($size: v.$text-sm);
+    @include m.text-sizing($size: v.$text-md);
   }
 }
-

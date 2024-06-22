@@ -8,3 +8,9 @@
 @mixin text-sizing($size) {
   font-size: $size;
 }
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+}
