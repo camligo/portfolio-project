@@ -7,9 +7,12 @@
 }
 .text--lg {
   font-size: 2.75em;
+  text-transform: uppercase;
 }
 .text--xl {
   font-size: 4em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .heading {
@@ -20,15 +23,24 @@
 }
 .heading--lg {
   font-size: 4em;
+  text-transform: uppercase;
 }
 .heading--xl {
   font-size: 4em;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 body {
   margin: 0;
   padding: 0;
   background-color: #FFF8F0;
+}
+body .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
 }
 
 main {
@@ -52,23 +64,7 @@ nav ul li a {
 }
 
 h1 {
-  color: red;
-  letter-spacing: 0.1em;
-}
-@media screen and (min-width: 320px) {
-  h1 {
-    color: blue;
-  }
-}
-@media screen and (min-width: 481px) {
-  h1 {
-    color: green;
-  }
-}
-@media screen and (min-width: 821px) {
-  h1 {
-    color: orange;
-  }
+  color: #FF4575;
 }
 
 h2, p {
@@ -86,7 +82,7 @@ h2, p {
   list-style-type: none;
 }
 .footer-links li a {
-  color: rgb(0, 37, 255);
+  color: #0224FF;
   font-size: 3em;
 }
 .footer-links li a:hover {
@@ -104,8 +100,25 @@ h2, p {
   justify-content: center;
   width: 100%;
 }
-.container-contact #btn-submit {
-  height: 3em;
+
+#btnSubmit {
+  width: 140px;
+  height: 45px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+  color: rgb(0, 24, 164);
+}
+#btnSubmit:hover {
+  background-color: #FFC700;
+  box-shadow: 0px 15px 20px rgba(176, 168, 17, 0.4);
+  color: #fff;
+  transform: translateY(-7px);
 }
 
 .floating-input {
@@ -116,18 +129,25 @@ h2, p {
 .floating-input input {
   background: none;
   border: none;
-  border-bottom: 2px solid #000;
-  margin-top: 16px;
-  padding: 16px;
+  border-bottom: 2px solid rgb(0, 24, 164);
+  margin-top: 14px;
+  padding: 14px;
   width: 100%;
 }
+.floating-input input:focus {
+  outline: none;
+}
 .floating-input textarea {
-  background: hsla(0, 0%, 99%, 0.471);
-  border: 2px solid #000;
+  background: hsla(0, 0%, 99%, 0.7);
+  border: 2px solid rgb(0, 24, 164);
   height: 240px;
   margin-top: 16px;
   padding: 16px;
   width: 100%;
+  font-family: "Inter", sans-serif;
+}
+.floating-input textarea:focus {
+  outline: none;
 }
 
 form {

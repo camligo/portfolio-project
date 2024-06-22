@@ -8,61 +8,61 @@
   <title>Portfolio page</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li>
-          <a href="#">About</a>
-        </li>
-        <li>
-          <a href="#">Projects</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
-  </header>
+  <div class="wrapper">
+    <header>
+      <nav>
+        <ul>
+          <li>
+            <a href="#">About</a>
+          </li>
+          <li>
+            <a href="#">Projects</a>
+          </li>
+          <li>
+            <a href="#">Contact</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
 
-  <main>
-    <section class="about">
-      <h1 class="text--xl">Hi, I'm Camilla</h1>
+    <main>
+      <section class="about">
+        <h1 class="text--xl">Hi, I'm Camilla 👋</h1>
+        <div class="container-about">
+          <h2 class="text--lg">About me</h2>
+          <p class="text--sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus distinctio iste cupiditate vero sed mollitia, recusandae sequi ducimus! At et repudiandae facilis consequatur excepturi dicta quasi nostrum itaque animi ducimus.</p>
+        </div>
+      </section>
 
-      <div class="container-about">
-        <h2 class="text--lg">About me</h2>
-        <p class="text--sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus distinctio iste cupiditate vero sed mollitia, recusandae sequi ducimus! At et repudiandae facilis consequatur excepturi dicta quasi nostrum itaque animi ducimus.</p>
-      </div>
-    </section>
+      <section class="projects">
+        <h2 class="text--lg">Projects</h2>
+      </section>
 
-    <section class="projects">
-      <h2 class="text--lg">Projects</h2>
-    </section>
+      <section class="contact">
 
-    <section class="contact">
-      <h2 class="text--lg">Get in touch</h2>
-
-      <div class="container-contact">
-        <form id="contactForm">
-          <div class="floating-input">
-            <input type="text" id="firstName" name="firstName" placeholder="First name">
-          </div>
-          <div class="floating-input">
-            <input type="text" id="lastName" name="lastName" placeholder="Last name">
-          </div>
-          <div class="floating-input">
-            <input type="email" id="email" name="email" placeholder="Email">
-          </div>
-          <div class="floating-input">
-            <textarea name="message" id="message" placeholder="Write a message"></textarea>
-          </div>
-          <div class="container-contact-btn">
-            <button type="submit" id="btnSubmit">Send</button>
-          </div>
-        </form>
-      </div>
-    </section>
-  </main>
-
+        <div class="container-contact">
+          <h2 class="text--lg">Get in touch</h2>
+          <form id="contactForm" class="form">
+            <div class="floating-input">
+              <input type="text" id="firstName" name="firstName" placeholder="First name" required>
+            </div>
+            <div class="floating-input">
+              <input type="text" id="lastName" name="lastName" placeholder="Last name" required>
+            </div>
+            <div class="floating-input">
+              <input type="email" id="email" name="email" placeholder="Email" required>
+            </div>
+            <div class="floating-input">
+              <textarea name="message" id="message" placeholder="Write a message" required></textarea>
+            </div>
+            <div class="container-contact-btn">
+              <button type="submit" id="btnSubmit">Send</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
   <footer>
     <ul class="footer-links">
       <li>

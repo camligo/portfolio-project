@@ -10,9 +10,12 @@ $text-xl: 4em;
   }
   &--lg {
     font-size: $text-lg;
+    text-transform: uppercase;
   }
   &--xl {
     font-size: $text-xl;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
   }
 }
 
