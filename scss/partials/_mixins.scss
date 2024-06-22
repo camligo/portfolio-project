@@ -1,35 +1,10 @@
-$text-sm: 1.5em;
-$text-md: 2em;
-$text-lg: 2.75em;
-$text-xl: 4em;
+@use "./variables";
 
-@mixin text-sizing($text-sm, $text-md, $text-lg) {
-  font-size: $text-md;
-  &--sm {
-    font-size: $text-sm;
-  }
-  &--lg {
-    font-size: $text-lg;
-    text-transform: uppercase;
-  }
-  &--xl {
-    font-size: $text-xl;
-    text-transform: uppercase;
-    letter-spacing: 0.1em;
-  }
+@mixin full-screen {
+  height: 100vh;
+  width: 100%;
 }
 
-.text {
-  @include text-sizing($text-sm, $text-md, $text-lg);
-}
-
-.heading {
-  @include text-sizing($text-md, $text-lg, $text-xl);
-}
-
-@mixin flexbox($direction) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: space-evenly;
-  align-items: center;
+@mixin text-sizing($size) {
+  font-size: $size;
 }

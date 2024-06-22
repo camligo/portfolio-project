@@ -1,29 +1,22 @@
-@use "./partials/variables"; // not working?
+@use "./partials/variables" as v;
 @use "./partials/mixins" as m;
 @use "./partials/queries" as q;
+@use "./sections/about";
+@use "./sections/contact";
+@use "./sections/projects";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
-$bg-color: #FFF8F0;
-$text-color: rgb(0, 24, 164);
-$contrast-color-blue: #0224FF;
-$contrast-color-yellow: #FFC700;
-$contrast-color-pink: #FF4575;
-$contrast-color-cherry: #FFAEC1;
-$bg-color: #FFF8F0;
-$text-color: rgb(0, 24, 164);
-$contrast-color: rgb(0, 37, 255);
-
 
 body {
   margin: 0;
   padding: 0;
-  background-color: $bg-color;
+  background-color: v.$bg-color;
 
   .wrapper {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 20px;
+    margin: 0 auto;
+    width: 90%;
   }
 }
 
@@ -33,123 +26,55 @@ main {
 }
 
 section {
-  min-height: 90vh;
-}
-
-nav {
-  ul {
-    @include m.flexbox($direction: row);
-    list-style-type: none;
-
-    li {
-      a {
-        text-decoration: none;
-      }
-    }
-  }
+  @include m.full-screen;
 }
 
 // Text styling
 h1 {
-  color: $contrast-color-pink;
-}
-
-h2, p {
-  color: $text-color;
-}
-
-// Contact & Footer styling
-.footer-links {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 2em;
-  margin-right: 30px;
-
-  li {
-    list-style-type: none;
-
-    a {
-      color: $contrast-color-blue;
-      font-size: 3em;
-
-      &:hover {
-        color: $text-color;
-      }
-    }
-  }
-}
-
-// Contact section
-.container-contact {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-
-  &-btn {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-  }
-}
-
-#btnSubmit {
-  width: 140px;
-  height: 45px;
+  color: v.$contrast-color-pink;
   text-transform: uppercase;
-  letter-spacing: 2.5px;
-  border: none;
-  border-radius: 45px;
-  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s ease 0s;
-  cursor: pointer;
-  outline: none;
-  color: $text-color;
+  @include q.phone {
+    @include m.text-sizing($size: v.$text-md);
+  }
+  @include q.ipad {
+    @include m.text-sizing($size: v.$text-md);
+  }
+  @include q.laptop {
+    @include m.text-sizing($size: v.$text-lg);
+  }
+  @include q.desktop {
+    @include m.text-sizing($size: v.$text-xl);
+  }
+};
 
-  &:hover {
-    background-color: $contrast-color-yellow;
-    box-shadow: 0px 15px 20px rgba(176, 168, 17, 0.4);
-    color: #fff;
-    transform: translateY(-7px);
+h2 {
+  color: v.$text-color;
+  @include q.phone {
+    @include m.text-sizing($size: v.$text-sm);
+  }
+  @include q.ipad {
+    @include m.text-sizing($size: v.$text-md);
+  }
+  @include q.laptop {
+    @include m.text-sizing($size: v.$text-md);
+  }
+  @include q.desktop {
+    @include m.text-sizing($size: v.$text-lg);
   }
 }
 
-.floating-input {
-  margin-bottom: 20px;
-  position: relative;
-  width: 100%;
-
-  input {
-    background: none;
-    border: none;
-    border-bottom: 2px solid $text-color;
-    margin-top: 14px;
-    padding: 14px;
-    width: 100%;
-
-    &:focus {
-      outline: none;
-    }
+p {
+  @include q.phone {
+    @include m.text-sizing($size: v.$text-sm);
   }
-
-  textarea {
-    background: hsla(0, 0%, 99%, 0.7);
-    border: 2px solid $text-color;
-    height: 240px;
-    margin-top: 16px;
-    padding: 16px;
-    width: 100%;
-    font-family: "Inter", sans-serif;
-
-    &:focus {
-      outline: none;
-    }
+  @include q.ipad {
+    @include m.text-sizing($size: v.$text-sm);
+  }
+  @include q.laptop {
+    @include m.text-sizing($size: v.$text-sm);
+  }
+  @include q.desktop {
+    @include m.text-sizing($size: v.$text-sm);
   }
 }
 
-form {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
-}

@@ -1,0 +1,48 @@
+@use "../partials/variables" as v;
+@use "../partials/mixins" as m;
+@use "../partials/queries" as q;
+
+nav {
+  ul {
+    list-style-type: none;
+    li {
+      a {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+.intro-container {
+  display: flex;
+  gap: 20px;
+
+  .intro-text {
+    float: right;
+  }
+}
+
+.socials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-inline-start: 0;
+
+  ul {
+    display: flex;
+
+    li {
+      list-style-type: none;
+      padding: 1em;
+
+      a {
+        color: v.$contrast-color-blue;
+        font-size: 3em;
+
+        &:hover {
+          color: v.$text-color;
+        }
+      }
+    }
+  }
+}
