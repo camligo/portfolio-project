@@ -9,37 +9,58 @@
   <title>Portfolio page</title>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul class="navbar-top" id="navPrimary" data-visible="false">
-        <li>
-          <a href="#home">Home</a>
+  <header class="header">
+    <nav class="nav-top">
+      <ul class="nav-menu">
+        <li class="nav-item">
+          <a href="#home" class="nav-link">Home</a>
         </li>
-        <li>
-          <a href="#about">About</a>
+        <li class="nav-item">
+          <a href="#skills" class="nav-link">Skills</a>
         </li>
-        <li>
-          <a href="#projects">Projects</a>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link">Projects</a>
         </li>
-        <li>
-          <a href="#contact">Contact</a>
+        <li class="nav-item">
+          <a href="#about" class="nav-link">About</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link">Contact</a>
         </li>
       </ul>
+      <!-- Hamburger menu -->
+      <div class="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
     </nav>
   </header>
 
-  <section id="home">
-    <div class="wrapper">
-      <h1 id="welcomeText">
-        <span>Hi, I'm Camilla Ligovic 👋</span>
-        <span>I'm <span id="typewriter"></span>
-        <span id="cursor">|</span>
-        <br>
-      </h1>
-    </div>
-  </section>
-
   <main>
+    <section id="home">
+      <div class="wrapper">
+        <h1 id="welcomeText">
+          <span>Hi, I'm Camilla Ligovic 👋</span>
+          <span>I'm <span id="typewriter"></span>
+          <span id="cursor">|</span>
+          <br>
+        </h1>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="wrapper">
+        <h2>Skills</h2>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrapper">
+        <h2>Projects</h2>
+      </div>
+    </section>
+
     <section id="about">
       <div class="wrapper">
         <h2>About me</h2>
@@ -75,12 +96,6 @@
             </li>
           </ul>
         </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="wrapper">
-        <h2>Projects</h2>
       </div>
     </section>
 

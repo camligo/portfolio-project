@@ -7,9 +7,13 @@
 @use "./sections/projects";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
   background-color: v.$bg-color;
   font-family: "Inter", sans-serif;
 
@@ -37,10 +41,7 @@ footer {
 h1 {
   color: v.$contrast-color-pink;
   text-transform: uppercase;
-  @include q.phone {
-    @include m.text-sizing($size: v.$text-lg);
-  }
-  @include q.ipad {
+  @include q.small-devices {
     @include m.text-sizing($size: v.$text-lg);
   }
   @include q.laptop {
@@ -54,10 +55,7 @@ h1 {
 h2 {
   color: v.$text-color;
   text-transform: uppercase;
-  @include q.phone {
-    @include m.text-sizing($size: v.$text-md);
-  }
-  @include q.ipad {
+  @include q.small-devices {
     @include m.text-sizing($size: v.$text-md);
   }
   @include q.laptop {
@@ -69,10 +67,7 @@ h2 {
 }
 
 p {
-  @include q.phone {
-    @include m.text-sizing($size: v.$text-sm);
-  }
-  @include q.ipad {
+  @include q.small-devices {
     @include m.text-sizing($size: v.$text-sm);
   }
   @include q.laptop {
