@@ -5,6 +5,7 @@
 @use "./sections/about";
 @use "./sections/contact";
 @use "./sections/projects";
+@use "./sections/skills";
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
@@ -29,20 +30,14 @@ main {
   margin: 20px;
 }
 
-section {
-  @include m.full-screen;
-  @include m.flex($direction: column)
-}
-
 footer {
   display: flex;
   justify-content: center;
 }
 
 h1 {
-  font-family: "Inter", sans-serif;
+  @include m.heading-style($weight: 800);
   color: v.$contrast-color-pink;
-  text-transform: uppercase;
   @include q.small-devices {
     @include m.text-sizing($size: v.$text-lg);
   }
@@ -55,11 +50,12 @@ h1 {
 };
 
 h2 {
-  font-family: "Inter", sans-serif;
+  @include m.heading-style($weight: 600);
   color: v.$text-color;
-  text-transform: uppercase;
+  margin-bottom: 25px;
   @include q.small-devices {
     @include m.text-sizing($size: v.$text-md);
+    text-align: center;
   }
   @include q.laptop {
     @include m.text-sizing($size: v.$text-lg);
@@ -70,20 +66,35 @@ h2 {
 }
 
 h3 {
-  font-family: "Inter", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  @include m.heading-style($weight: 250);
+  @include q.small-devices {
+    @include m.text-sizing($size: v.$text-sm);
+  }
+  @include q.laptop {
+    @include m.text-sizing($size: v.$text-md);
+  }
+  @include q.desktop {
+    @include m.text-sizing($size: v.$text-md);
+  }
 }
 
 h4 {
-  font-family: "Inter", sans-serif;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-weight: 500;
+  @include m.heading-style($weight: 200);
+  @include q.small-devices {
+    @include m.text-sizing($size: v.$text-xs);
+  }
+  @include q.laptop {
+    @include m.text-sizing($size: v.$text-sm);
+  }
+  @include q.desktop {
+    @include m.text-sizing($size: v.$text-sm);
+  }
 }
 
 p {
   font-family: "Questrial", sans-serif;
+  line-height: 1.4;
+  margin-block: 1.2rem;
   @include q.small-devices {
     @include m.text-sizing($size: v.$text-sm);
   }

@@ -2,8 +2,12 @@
 @use "../partials/mixins" as m;
 @use "../partials/queries" as q;
 
-.section-heading {
-  margin-bottom: 20px;
+#projects {
+  @include m.full-screen;
+  @include m.flex($direction: column);
+  @include q.small-devices {
+    @include m.full-screen;
+  }
 }
 
 #projectsHeading {
@@ -11,54 +15,50 @@
 }
 
 .projects-container {
-  .project-one {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include q.small-devices {
+    @include m.flex($direction: column);
     align-items: center;
+  }
+
+  .phone-mockup {
+    display: flex;
+    justify-content: end;
+    max-width: 70%;
+    max-height: 100%;
 
     @include q.small-devices {
-      @include m.flex($direction: column);
-      align-items: center;
-    }
-
-    .phone-mockup {
       display: flex;
-      justify-content: end;
-      max-width: 70%;
-      max-height: 100%;
-
-      @include q.small-devices {
-        display: flex;
-        justify-content: center;
-        max-width: 50%;
-        max-height: 80%;
-        flex-wrap: wrap;
-        flex-direction: column;
-        align-content: center;
-      }
-
-      img {
-        width: 50%;
-
-        @include q.small-devices {
-          width: 100%;
-        }
-      }
+      justify-content: center;
+      max-width: 50%;
+      max-height: 80%;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: center;
     }
 
-    .project-text {
-      flex: 1;
-      padding: 0 3rem;
-      text-align: left;
+    img {
+      width: 50%;
 
       @include q.small-devices {
-        padding: 0 1rem;
-        text-align: center;
+        width: 100%;
       }
+    }
+  }
 
-      .project-title {
-        margin-block: 1rem;
-      }
+  .project-text {
+    flex: 1;
+    padding: 0 3rem;
+    text-align: left;
+    @include q.small-devices {
+      padding: 0 1rem;
+      text-align: center;
+    }
+    .project-title {
+      margin-block: 1rem;
     }
   }
 }

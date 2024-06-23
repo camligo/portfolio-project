@@ -2,12 +2,36 @@
 @use "../partials/mixins" as m;
 @use "../partials/queries" as q;
 
+#about {
+  @include m.full-screen;
+  @include m.flex($direction: column);
+  @include q.small-devices {
+    margin-top: 10rem;
+  }
+}
+
+#aboutHeading {
+  margin-bottom: 0;
+  padding: 0 3rem;
+
+  @include q.small-devices {
+    text-align: center;
+  }
+}
+
 .intro-container {
   display: flex;
+  flex-direction: column;
   gap: 20px;
+  padding: 0 1rem;
+
+  @include q.small-devices {
+    text-align: center;
+  }
 
   .intro-text {
     float: right;
+    padding: 0 3rem;
   }
 }
 
@@ -25,8 +49,8 @@
       padding: 1em;
 
       a {
-        color: v.$contrast-color-blue;
-        font-size: 3em;
+        color: v.$contrast-color-pink;
+        font-size: 2.5rem;
 
         &:hover {
           color: v.$text-color;

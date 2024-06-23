@@ -2,6 +2,11 @@
 @use "../partials/mixins" as m;
 @use "../partials/queries" as q;
 
+#home {
+  @include m.full-screen;
+  @include m.flex($direction: column);
+}
+
 .nav-top {
   display: flex;
   justify-content: flex-end;

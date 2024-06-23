@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+#home {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
 .nav-top {
   display: flex;
   justify-content: flex-end;
@@ -86,12 +93,42 @@
   justify-content: center;
 }
 
+#about {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  #about {
+    margin-top: 10rem;
+  }
+}
+
+#aboutHeading {
+  margin-bottom: 0;
+  padding: 0 3rem;
+}
+@media screen and (max-width: 768px) {
+  #aboutHeading {
+    text-align: center;
+  }
+}
+
 .intro-container {
   display: flex;
+  flex-direction: column;
   gap: 20px;
+  padding: 0 1rem;
+}
+@media screen and (max-width: 768px) {
+  .intro-container {
+    text-align: center;
+  }
 }
 .intro-container .intro-text {
   float: right;
+  padding: 0 3rem;
 }
 
 .socials {
@@ -108,8 +145,8 @@
   padding: 1em;
 }
 .socials ul li a {
-  color: #0224FF;
-  font-size: 3em;
+  color: #FF4575;
+  font-size: 2.5rem;
 }
 .socials ul li a:hover {
   color: rgb(0, 24, 164);
@@ -196,34 +233,43 @@ footer p {
   margin-bottom: 1.5em;
 }
 
-.section-heading {
-  margin-bottom: 20px;
+#projects {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+@media screen and (max-width: 768px) {
+  #projects {
+    height: 100vh;
+    width: 100%;
+  }
 }
 
 #projectsHeading {
   text-align: center;
 }
 
-.projects-container .project-one {
+.projects-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 @media screen and (max-width: 768px) {
-  .projects-container .project-one {
+  .projects-container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 }
-.projects-container .project-one .phone-mockup {
+.projects-container .phone-mockup {
   display: flex;
   justify-content: end;
   max-width: 70%;
   max-height: 100%;
 }
 @media screen and (max-width: 768px) {
-  .projects-container .project-one .phone-mockup {
+  .projects-container .phone-mockup {
     display: flex;
     justify-content: center;
     max-width: 50%;
@@ -233,26 +279,26 @@ footer p {
     align-content: center;
   }
 }
-.projects-container .project-one .phone-mockup img {
+.projects-container .phone-mockup img {
   width: 50%;
 }
 @media screen and (max-width: 768px) {
-  .projects-container .project-one .phone-mockup img {
+  .projects-container .phone-mockup img {
     width: 100%;
   }
 }
-.projects-container .project-one .project-text {
+.projects-container .project-text {
   flex: 1;
   padding: 0 3rem;
   text-align: left;
 }
 @media screen and (max-width: 768px) {
-  .projects-container .project-one .project-text {
+  .projects-container .project-text {
     padding: 0 1rem;
     text-align: center;
   }
 }
-.projects-container .project-one .project-text .project-title {
+.projects-container .project-text .project-title {
   margin-block: 1rem;
 }
 
@@ -297,6 +343,34 @@ footer p {
   margin: 0.5rem;
 }
 
+#skills {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 0;
+}
+
+.skills-title {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.skills-title i {
+  font-size: 2rem;
+}
+.skills-title i:hover {
+  color: #FFC700;
+  transition: 0.1s ease;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -317,13 +391,6 @@ main {
   margin: 20px;
 }
 
-section {
-  height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-}
-
 footer {
   display: flex;
   justify-content: center;
@@ -331,8 +398,10 @@ footer {
 
 h1 {
   font-family: "Inter", sans-serif;
-  color: #FF4575;
   text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 800;
+  color: #FF4575;
 }
 @media screen and (max-width: 768px) {
   h1 {
@@ -352,12 +421,16 @@ h1 {
 
 h2 {
   font-family: "Inter", sans-serif;
-  color: rgb(0, 24, 164);
   text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 600;
+  color: rgb(0, 24, 164);
+  margin-bottom: 25px;
 }
 @media screen and (max-width: 768px) {
   h2 {
     font-size: 24px;
+    text-align: center;
   }
 }
 @media screen and (min-width: 769px) {
@@ -374,18 +447,51 @@ h2 {
 h3 {
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  letter-spacing: 0.2rem;
+  font-weight: 250;
+}
+@media screen and (max-width: 768px) {
+  h3 {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 769px) {
+  h3 {
+    font-size: 24px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h3 {
+    font-size: 24px;
+  }
 }
 
 h4 {
   font-family: "Inter", sans-serif;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  font-weight: 500;
+  letter-spacing: 0.2rem;
+  font-weight: 200;
+}
+@media screen and (max-width: 768px) {
+  h4 {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 769px) {
+  h4 {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  h4 {
+    font-size: 18px;
+  }
 }
 
 p {
   font-family: "Questrial", sans-serif;
+  line-height: 1.4;
+  margin-block: 1.2rem;
 }
 @media screen and (max-width: 768px) {
   p {

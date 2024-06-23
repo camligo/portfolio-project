@@ -9,7 +9,15 @@
   font-size: $size;
 }
 
+@mixin heading-style($weight) {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: $weight;
+}
+
 @mixin flex($direction) {
   display: flex;
   flex-direction: $direction;
 }
+

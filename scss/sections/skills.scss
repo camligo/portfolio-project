@@ -1,0 +1,28 @@
+@use "../partials/variables" as v;
+@use "../partials/mixins" as m;
+@use "../partials/queries" as q;
+
+#skills {
+  @include m.full-screen;
+  @include m.flex($direction: column);
+  text-align: center;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+  padding: 0;
+}
+
+.skills-title {
+  @include m.flex($direction: column);
+  text-align: center;
+  i {
+    font-size: 2rem;
+    &:hover {
+      color: v.$contrast-color-yellow;
+      transition: 0.1s ease;
+    }
+  }
+}
