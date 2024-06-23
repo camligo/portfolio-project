@@ -90,3 +90,13 @@ footer {
     margin-bottom: 1.5em;
   }
 }
+
+.to-top {
+  margin-block: 3rem;
+
+  #top {
+    @include m.text-sizing($size: v.$text-lg);
+    color: v.$text-color;
+    scroll-behavior: smooth;
+  }
+}
