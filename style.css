@@ -1,9 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
 .nav-top {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 1rem 1.5rem;
+  padding: 2rem 1.5rem;
+  font-family: "Questrial", sans-serif;
 }
 
 .nav-menu {
@@ -13,7 +15,6 @@
   letter-spacing: 3px;
   margin-right: 20px;
   list-style-type: none;
-  font-weight: bold;
 }
 .nav-menu .nav-link {
   color: rgb(0, 24, 164);
@@ -195,6 +196,107 @@ footer p {
   margin-bottom: 1.5em;
 }
 
+.section-heading {
+  margin-bottom: 20px;
+}
+
+#projectsHeading {
+  text-align: center;
+}
+
+.projects-container .project-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .projects-container .project-one {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.projects-container .project-one .phone-mockup {
+  display: flex;
+  justify-content: end;
+  max-width: 70%;
+  max-height: 100%;
+}
+@media screen and (max-width: 768px) {
+  .projects-container .project-one .phone-mockup {
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+    max-height: 80%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+  }
+}
+.projects-container .project-one .phone-mockup img {
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .projects-container .project-one .phone-mockup img {
+    width: 100%;
+  }
+}
+.projects-container .project-one .project-text {
+  flex: 1;
+  padding: 0 3rem;
+  text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .projects-container .project-one .project-text {
+    padding: 0 1rem;
+    text-align: center;
+  }
+}
+.projects-container .project-one .project-text .project-title {
+  margin-block: 1rem;
+}
+
+.made-with {
+  padding-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+@media screen and (max-width: 768px) {
+  .made-with {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+}
+.made-with .icons-container {
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  padding: 0;
+}
+@media screen and (max-width: 768px) {
+  .made-with .icons-container {
+    justify-content: center;
+  }
+}
+.made-with .icons-container .icon-item {
+  font-size: 2rem;
+  list-style: none;
+}
+
+.project-links {
+  text-transform: uppercase;
+}
+.project-links a {
+  text-decoration: none;
+  font-family: "Questrial", sans-serif;
+}
+.project-links #divider {
+  margin: 0.5rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -203,7 +305,6 @@ footer p {
 
 body {
   background-color: #FFF8F0;
-  font-family: "Inter", sans-serif;
 }
 body .wrapper {
   display: flex;
@@ -229,6 +330,7 @@ footer {
 }
 
 h1 {
+  font-family: "Inter", sans-serif;
   color: #FF4575;
   text-transform: uppercase;
 }
@@ -249,6 +351,7 @@ h1 {
 }
 
 h2 {
+  font-family: "Inter", sans-serif;
   color: rgb(0, 24, 164);
   text-transform: uppercase;
 }
@@ -268,6 +371,22 @@ h2 {
   }
 }
 
+h3 {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+}
+
+h4 {
+  font-family: "Inter", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  font-weight: 500;
+}
+
+p {
+  font-family: "Questrial", sans-serif;
+}
 @media screen and (max-width: 768px) {
   p {
     font-size: 18px;

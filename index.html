@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="./style.css">
   <script src="script.js" defer></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <title>Portfolio page</title>
 </head>
 <body>
@@ -51,19 +52,57 @@
 
     <section id="skills">
       <div class="wrapper">
-        <h2>Skills</h2>
+        <h2 class="section-heading">Skills</h2>
       </div>
     </section>
 
     <section id="projects">
       <div class="wrapper">
-        <h2>Projects</h2>
+        <h2 class="section-heading" id="projectsHeading">Projects</h2>
+        <div class="projects-container">
+          <div class="project-one">
+            <div class="phone-mockup">
+              <img src="./assets/images/image1 5.png" alt="iPhone 13 screen mockup">
+            </div>
+            <div class="project-text">
+              <h3 class="project-title">Name Placeholder</h3>
+              <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+              <p>Voluptas ducimus doloremque deleniti velit, ea numquam aspernatur quis dignissimos laboriosam laudantium placeat dolore qui officiis delectus repellat ratione assumenda dolores blanditiis.</p>
+              <div class="made-with">
+                <h4>Made with:</h4>
+                <ul class="icons-container">
+
+                  <li class="icon-item">
+                    <i class="devicon-rails-plain" aria-hidden="true" title="Rails"></i>
+                  </li>
+
+                  <li class="icon-item">
+                    <i class="devicon-html5-plain" aria-hidden="true" title="HTML"></i>
+                  </li>
+
+                  <li class="icon-item">
+                    <i class="devicon-sass-original" aria-hidden="true" title="Sass"></i>
+                  </li>
+
+                  <li class="icon-item">
+                    <i class="devicon-bootstrap-plain" aria-hidden="true" title="Bootstrap"></i>
+                  </li>
+                </ul>
+                <div class="project-links">
+                  <a href="#" target="_blank" title="Live link to site">Live site</a>
+                  <span id="divider"> | </span>
+                  <a href="#" target="_blank" title="Link to Github repo">Github</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section id="about">
       <div class="wrapper">
-        <h2>About me</h2>
+        <h2 class="section-heading">About me</h2>
         <div class="intro-container">
           <div class="intro-text">
             <p>
@@ -101,7 +140,7 @@
 
     <section id="contact">
       <div class="wrapper">
-        <h2>Get in touch</h2>
+        <h2 class="section-heading">Get in touch</h2>
         <form id="contactForm" class="form">
           <div class="floating-input">
             <input type="text" id="firstName" name="firstName" placeholder="First name" required>
@@ -129,4 +168,5 @@
     <p>Designed by Camilla Ligovic 2024</p>
   </footer>
 </body>
+<!-- https://previewed.app/ -->
 </html>

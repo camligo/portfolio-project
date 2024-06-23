@@ -1,0 +1,104 @@
+@use "../partials/variables" as v;
+@use "../partials/mixins" as m;
+@use "../partials/queries" as q;
+
+.section-heading {
+  margin-bottom: 20px;
+}
+
+#projectsHeading {
+  text-align: center;
+}
+
+.projects-container {
+  .project-one {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @include q.small-devices {
+      @include m.flex($direction: column);
+      align-items: center;
+    }
+
+    .phone-mockup {
+      display: flex;
+      justify-content: end;
+      max-width: 70%;
+      max-height: 100%;
+
+      @include q.small-devices {
+        display: flex;
+        justify-content: center;
+        max-width: 50%;
+        max-height: 80%;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: center;
+      }
+
+      img {
+        width: 50%;
+
+        @include q.small-devices {
+          width: 100%;
+        }
+      }
+    }
+
+    .project-text {
+      flex: 1;
+      padding: 0 3rem;
+      text-align: left;
+
+      @include q.small-devices {
+        padding: 0 1rem;
+        text-align: center;
+      }
+
+      .project-title {
+        margin-block: 1rem;
+      }
+    }
+  }
+}
+
+.made-with {
+  padding-top: 2rem;
+  @include m.flex($direction: column);
+  gap: 0.5rem;
+
+  @include q.small-devices {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .icons-container {
+    display: flex;
+    justify-content: flex-start;
+    gap: 1rem;
+    padding: 0;
+
+    @include q.small-devices {
+      justify-content: center;
+    }
+
+    .icon-item {
+      font-size: 2rem;
+      list-style: none;
+    }
+  }
+}
+
+.project-links {
+  text-transform: uppercase;
+  a {
+    text-decoration: none;
+    font-family: "Questrial", sans-serif;
+  }
+  #divider {
+    margin: 0.5rem;
+  }
+}
