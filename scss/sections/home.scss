@@ -91,3 +91,29 @@
 #home {
   justify-content: center;
 }
+
+// Typewriter
+
+#welcomeText {
+  text-align: left;
+  height: 200px;
+}
+
+#typewriter {
+  color: v.$text-color;
+  font-weight: bold;
+}
+
+#cursor {
+  color: v.$text-color;
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+}
