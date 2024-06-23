@@ -93,6 +93,29 @@
   justify-content: center;
 }
 
+#welcomeText {
+  text-align: left;
+  height: 200px;
+}
+
+#typewriter {
+  color: rgb(0, 24, 164);
+  font-weight: bold;
+}
+
+#cursor {
+  color: rgb(0, 24, 164);
+  animation: blink 1s linear infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 0%;
+  }
+}
 #about {
   height: 100vh;
   width: 100%;
