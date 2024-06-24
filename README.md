@@ -1,12 +1,11 @@
 This project showcases my skills and projects using modern web development technologies including HTML, SCSS, and JavaScript. The purpose of this portfolio is to provide a platform to display my work and allow visitors to get in touch with me.  
 
 ## Features  
-**Responsive Design:** The website is fully responsive and works well on different screen sizes and devices.  
-**Smooth Animations:** Includes smooth animations and transitions for an enhanced user experience.  
+**Responsive Design:** The website is fully responsive and works on different screen sizes and devices.  
 **Typewriter Effect:** Implemented a typewriter effect for a dynamic introduction section.  
 **Interactive Navigation:** A mobile-friendly hamburger menu for easy navigation.  
-**Project Showcase:** A dedicated section to display my projects with descriptions and links to live demos and source code.  
-**Skills Display:** Showcases my technical skills with icons and titles.  
+**Project Showcase:** A dedicated section to display projects with descriptions and links to live demos and source code.  
+**Skills Display:** Showcases technical skills with icons and titles.  
 **Contact Form:** A functional contact form that allows visitors to send messages directly from the website.  
 
 ## Technologies Used  
